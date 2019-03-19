@@ -357,13 +357,13 @@ extern "C" void* ThreadStats(void*) {
   } while(1);
 }
 
-static const string mainnet_seeds[] = {"synchrotron-seed.dynu.net", ""};
+static const string mainnet_seeds[] = {"synchrotron-seed.dynu.net", "","synchrotron-seed2.dynu.net",""};
 static const string testnet_seeds[] = {""};
 static const string *seeds = mainnet_seeds;
 
 extern "C" void* ThreadSeeder(void*) {
   if (!fTestNet){
-    db.Add(CService("54ktu5wby3agev2d.onion", 7655), true);
+    db.Add(CService("54ktu5wby3agev2d.onion", 11111), true);
 
   }
   do {
